@@ -1,0 +1,28 @@
+.header-wrapper {
+    grid-row: header-s/header-e;
+    grid-column: header-s/header-e;
+
+    display: grid;
+    grid-template-columns: [s] 1fr [e];
+    grid-template-rows: [titel-s] 3rem [title-e sub-s] 2rem [sub-e];
+
+    &__title {
+        grid-row: title-s/title-e;
+        grid-column: s/e;
+    }
+    &__subtitle {
+        grid-row: sub-s/sub-e;
+        grid-column: s/e;
+    }
+}
+
+.header {
+    padding-top: 4rem;
+
+    &__title {
+        line-height: 4rem;
+    }
+    &__subtitle {
+        line-height: 1.6rem;
+    }
+}

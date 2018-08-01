@@ -11,10 +11,10 @@ class Dashboard extends Component {
             tabs: [
                 {
                     title: 'resipies',
-                    active: false,
+                    active: true,
                     component: <h4>more stuff</h4>
-                }
-                
+                },
+
                 {
                     title: 'rebuttle',
                     active: false,
@@ -23,10 +23,14 @@ class Dashboard extends Component {
             ]
         }
     }
+
+    handelTabChange = (title) => {
+
+    }
     render () {
         return (
             <div className='dashboard'>
-                <TabNav tabs={this.state.tabs}/>
+                <TabNav handelTabChange={(title) => this.handelTabChange(title)} tabs={this.state.tabs}/>
             </div>
         )
     
